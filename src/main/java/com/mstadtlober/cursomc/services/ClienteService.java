@@ -98,7 +98,7 @@ public class ClienteService {
 			repo.delete(id);					
 		}
 		catch (DataIntegrityViolationException e) {
-			throw new DataIntegrityException("Não é possível excluir um Cliente que possui pedido(s)!");
+			throw new DataIntegrityException("Não é possível excluir porque há pedidos relacionados!");
 		}
 	}
 
